@@ -8,6 +8,9 @@ Begun by heavily modifying [new era light](https://github.com/juanmnl/new-era-li
 
 ![soft era syntax theme screenshot](screenshot.png)
 
+Open Atom Preferences > Themes > Search: `soft-era-syntax`,
+then Install.
+
 ---
 
 ### Suggested modifications for the default UI theme (One Light) to paste into your user stylesheet:
