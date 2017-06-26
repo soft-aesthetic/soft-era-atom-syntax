@@ -8,6 +8,8 @@ Begun by heavily modifying [new era light](https://github.com/juanmnl/new-era-li
 
 ![soft era syntax theme screenshot](screenshot.png)
 
+## Installation
+
 Open Atom Preferences > Themes > Search: `soft-era-syntax`,
 then Install.
 
