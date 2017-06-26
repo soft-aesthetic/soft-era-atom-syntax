@@ -14,7 +14,7 @@ Begun by heavily modifying [new era light](https://github.com/juanmnl/new-era-li
 - Search for `soft-era-syntax` and click Install
 - Go to **Settings > Themes** and choose **Soft Era** from the dropdown menu
 
-###### or, from the command line
+###### or, from the command line:
 
 ```apm install pure-syntax```
 
