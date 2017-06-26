@@ -10,8 +10,16 @@ Begun by heavily modifying [new era light](https://github.com/juanmnl/new-era-li
 
 ## Installation
 
-Open Atom Preferences > Themes > Search: `soft-era-syntax`,
-then Install.
+- Go to **Settings > Install > Themes tab**
+- Search for `soft-era-syntax` and click Install
+- Go to **Settings > Themes** and choose **Soft Era** from the dropdown menu
+
+\~ or, from the command line \~
+
+```apm install pure-syntax```
+
+
+💾 enjoy <3
 
 ---
 
