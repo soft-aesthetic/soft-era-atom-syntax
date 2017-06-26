@@ -1,0 +1,271 @@
+@import "./styles/base.less";
+
+
+/* ==================================
+
+~ soft era ~
+
+================================== */
+
+/*
+fav fonts:
+- Fira Code (fancy ligatures)
+- BPmono (i used this in italics for comments, it's cute)
+- Anonymous Pro
+- Source Code Pro
+*/
+
+@soft-purple-light: #eceafa;
+
+@soft-background: #f9f5f5;
+@soft-text: #B3A2A2;
+@soft-text: #baafaf;
+@soft-text: #ccbaba;
+@soft-text: #c8b3b3;
+@soft-text-emphasis: #948484;
+@soft-text-faded: #c6b8b8;
+@soft-text-faded: #e2d1d1;
+@soft-text-dark: #262536;
+@soft-purple-default: #cfc9f4;
+@soft-purple-darker: #b4addf;
+@soft-purple-darkest: #aba4d1;
+
+
+atom-text-editor {
+  color: @soft-text;
+  background-color: @soft-background;
+  font-weight: 400;
+}
+atom-text-editor::shadow .gutter {
+    color: rgba(179,162,162,.62);
+    background-color: #f9f5f5;
+    font-weight: 100;
+}
+atom-text-editor .gutter .line-number.cursor-line {
+  background: none;
+  color: #888080;
+  color: @soft-purple-darker;
+}
+.syntax--punctuation {
+  color: @soft-text !important;
+  color: @soft-text-faded !important;
+}
+.syntax--entity.syntax--other.syntax--inherited-class {
+  color: inherit;
+}
+.syntax--constant, .syntax--numeric, .syntax--entity.syntax--other.syntax--attribute-name {
+  color: @soft-text-emphasis !important;
+}
+.syntax--constant.syntax--numeric,
+.syntax--constant.syntax--boolean,
+.syntax--string
+{
+  color: @soft-text-dark !important;
+}
+// .syntax--string {
+//   // color: #dd8eb5 !important;
+//   color: @soft-text-dark !important;
+// }
+.syntax--string.syntax--begin, .syntax--string.syntax--end {
+  color: #fff !important;
+  font-weight: 900;
+  text-shadow:  0 1px 0 @soft-text-dark,
+                0 0 1px @soft-text-dark,
+                0 0 1px @soft-text-dark,
+                0 0 1px @soft-text-dark;
+}
+.syntax--variable {
+    color: @soft-purple-darkest;
+}
+
+// this, super, etc
+atom-text-editor::shadow {
+  .variable.language.js {
+    font-weight: 500;
+    color: #e4bcbf;
+  }
+}
+// .syntax--variable.syntax--parameter.syntax--function.syntax--js {
+//   color: #dd698c;
+// }
+.syntax--variable.syntax--parameter.syntax--function.syntax--js,
+atom-text-editor::shadow .meta.arguments.js,
+.syntax--parameter,
+.syntax--function.syntax--parameter,
+.syntax--variable.syntax--parameter.syntax--function
+{
+  color: #db90a7;
+}
+
+.syntax--variable.syntax--parameter.syntax--function.syntax--js .syntax--brace,
+atom-text-editor::shadow .meta.arguments.js .syntax--brace,
+.syntax--parameter .syntax--brace,
+.syntax--function.syntax--parameter .syntax--brace,
+.syntax--variable.syntax--parameter.syntax--function .syntax--brace
+{
+  color: #eeaabe;
+}
+
+
+//targets both arrows from arrow functions, and the word "function" when declaring
+// .syntax--storage {
+//   color: #98c4ba;
+// }
+
+// targets the word "function" when declaring a function
+.syntax--type.syntax--function.syntax--js:not(.syntax--arrow) {
+  // font-style: italic;
+  color: #98c4ba;
+}
+
+// targets arrows when defining arrow function
+.syntax--function.syntax--arrow {
+  color: #25b7b8;
+}
+
+// targets functions when used inline,
+// and the function name in the declaration
+.syntax--entity.syntax--name.syntax--function,
+.syntax--support.syntax--function {
+  color: #25b7b8;
+}
+
+
+// 'let': syntax--storage syntax--type syntax--var syntax--js
+// 'todo: syntax--storage syntax--type syntax--class syntax--todo
+// .syntax--storage {
+//   color: #ce9ae8;
+// }
+
+.syntax--storage {
+  color: #ce9ae8;
+}
+.syntax--todo,
+.syntax--question,
+.syntax--note,
+.syntax--fixme,
+.syntax--changed,
+.syntax--xxx,
+.syntax--idea,
+.syntax--hack,
+.syntax--review,
+.syntax--xxx
+ {
+  color: #e4846f;
+}
+
+.syntax--keyword.syntax--control {
+    color: #82b4e3;
+}
+
+// .syntax--keyword.syntax--operator {
+//     color: #ec57b4;
+// }
+
+// .tab-bar .tab.active[data-type$="Editor"], .tab-bar .tab.active[data-type$="AboutView"], .tab-bar .tab.active[data-type$="TimecopView"], .tab-bar .tab.active[data-type$="StyleguideView"], .tab-bar .tab.active[data-type="MarkdownPreviewView"] {
+.tab-bar .tab.active {
+  background-color: #f9f5f5 !important;
+}
+.tab.texteditor.active::before {
+  background: @soft-purple-darker !important;
+  // width: 4px !important;9
+}
+.tab-bar .close-icon {
+  color: @soft-purple-darkest !important;
+}
+
+.tab-bar .close-icon:hover {
+  color: @soft-text-dark !important;
+  background: #fff !important;
+}
+
+
+.bracket-matcher.region {
+  border: none !important;
+  background: #dbd5ff !important;
+  background: #a8a4be !important;
+  background: #b3b1bb !important;
+  border-radius: 5px;
+  background: #fff !important;
+  box-shadow:
+    0px 1px 1px rgba(168,164,190,.74),
+    0px -1px 3px -1px rgba(168,164,190,.3),
+    0px 1px 5px -1px rgba(168,164,190,.9);
+  // padding: 5px;
+}
+atom-text-editor .cursor {
+  border: none;
+  border-left: 2px solid rgba(244,129,187,1);
+  border-top: 0;
+  border-bottom: 0;
+}
+atom-text-editor .cursor:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -1px;
+  width: .55em;
+  height: 100%;
+  background: rgba(255,88,173,.15);
+  background: rgba(244,129,187,.15);
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
+}
+.editor .selection .region {
+  background: @soft-purple-light;
+}
+
+.tooltip {
+  @tip-background-color: @soft-purple-default;
+  @tip-text-color: #fff;
+
+  .tooltip-inner {
+    line-height: 19px;
+    background-color: @tip-background-color;
+    color: @tip-text-color;
+    box-shadow: 0 1px 3px rgba(139,127,154,.2),
+                0 1px 8px -2px rgba(139,127,154,.2);
+  }
+
+  &.top .tooltip-arrow {
+    border-top-color: @tip-background-color;
+  }
+  &.top-left .tooltip-arrow {
+    border-top-color: @tip-background-color;
+  }
+  &.top-right .tooltip-arrow {
+    border-top-color: @tip-background-color;
+  }
+  &.right .tooltip-arrow {
+    border-right-color: @tip-background-color;
+  }
+  &.left .tooltip-arrow {
+    border-left-color: @tip-background-color;
+  }
+  &.bottom .tooltip-arrow {
+    border-bottom-color: @tip-background-color;
+  }
+  &.bottom-left .tooltip-arrow {
+    border-bottom-color: @tip-background-color;
+  }
+  &.bottom-right .tooltip-arrow {
+    border-bottom-color: @tip-background-color;
+  }
+}
+
+// styles for the indent-guide-improved package
+// https://atom.io/packages/indent-guide-improved
+.indent-guide-improved {
+  background-color: #ebe9e8;
+  &.indent-guide-stack {
+    background-color: #dad6d5;
+    background-color: #e2dddb;
+    background-color: #ebe9e8;
+    &.indent-guide-active {
+      background-color: #d0cdcc;
+    }
+  }
+}
+
+
+// end soft era

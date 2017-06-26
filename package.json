@@ -1,0 +1,24 @@
+{
+  "name": "soft-era-syntax",
+  "theme": "syntax",
+  "version": "0.0.0",
+  "description": "Light pastel syntax theme for soft, warm, cozy, or cute coding",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/animalphase/soft-era-syntax.git"
+  },
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "keywords": [
+    "atom",
+    "syntax",
+    "theme"
+  ],
+  "author": "animalphase",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/animalphase/soft-era-syntax/issues"
+  },
+  "homepage": "https://github.com/animalphase/soft-era-syntax"
+}
