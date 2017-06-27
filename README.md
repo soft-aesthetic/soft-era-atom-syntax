@@ -76,6 +76,8 @@ atom-text-editor::shadow .comment {
 
 ## Contributing
 
+Currently only styled with JS, CSS, and HTML in mind.
+
 Happy to hear any input <3
 
 💖 [@animalphase](https://twitter.com/animalphase) on twitter

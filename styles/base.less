@@ -148,7 +148,7 @@
   }
 
   &.parameter.function {
-    color: @tags;
+    color: @soft-red !important; // prevent parameter definition color from being overwritten by argument colors below
   }
 }
 
@@ -193,7 +193,7 @@
     &.variable,
     &.parameters,
     &.array {
-      color: @tags;
+      color: @soft-red;
     }
 
     &.heading,
@@ -351,7 +351,7 @@
 // .variable.language.js
 .variable.language {
   font-weight: 500;
-  color: @soft-salmon;
+  color: @soft-purple-default;
 }
 
 
@@ -377,4 +377,35 @@
     0px 1px 1px rgba(168,164,190,.74),
     0px -1px 1px -1px rgba(168,164,190,.3),
     0px 0px 1px -1px rgba(168,164,190,.9);
+}
+
+
+// otherwise unstyled text passed as arguments,
+.syntax--variable.syntax--parameter.syntax--function.syntax--js,
+atom-text-editor::shadow .meta.arguments.js,
+.syntax--parameter,
+.syntax--function.syntax--parameter,
+.syntax--variable.syntax--parameter.syntax--function
+{
+  color: @soft-salmon;
+  // color: @soft-red;
+  color: @soft-red-faded;
+  // color: @soft-red-faded !important;
+}
+// punctuation for things passed as arguments
+.syntax--variable.syntax--parameter.syntax--function.syntax--js .syntax--brace,
+atom-text-editor::shadow .meta.arguments.js .syntax--brace,
+.syntax--parameter .syntax--brace,
+.syntax--arguments .syntax--punctuation,
+.syntax--function.syntax--parameter .syntax--brace,
+.syntax--variable.syntax--parameter.syntax--function .syntax--brace
+{
+  color: @soft-salmon;
+  color: @soft-red-faded;
+}
+
+// targets the curly braces of an empty js object being passed as an arguments
+.syntax--arguments .syntax--punctuation:not(.syntax--definition) {
+  color: @soft-salmon !important;
+  color: @soft-red-faded !important;
 }
