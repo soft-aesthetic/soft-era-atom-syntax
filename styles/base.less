@@ -1,14 +1,5 @@
 @import "syntax-variables";
 
-@tags: @soft-red;
-@tags: @soft-text-emphasis;
-@tags: @soft-salmon;
-@red: @soft-red;
-@orange: @soft-hot-pink;
-@yellow: @soft-text-dark;
-@purple: @soft-purple-darkest;
-@morado: @soft-violet;
-
 :host, .atom-text-editor {
   background-color: @soft-background;
   color: @soft-text;
@@ -116,6 +107,7 @@
   &.operator {
     // color: lighten(@orange, 10%);
     color: @soft-hot-pink;
+    font-weight: 500;
   }
 
   &.other.special-method {
@@ -358,7 +350,7 @@
 //this, super, etc:
 // .variable.language.js
 .variable.language {
-  // font-weight: 500;
+  font-weight: 500;
   color: @soft-salmon;
 }
 
