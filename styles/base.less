@@ -1,7 +1,13 @@
 @import "syntax-variables";
 
 @tags: @soft-red;
-
+@tags: @soft-text-emphasis;
+@tags: @soft-salmon;
+@red: @soft-red;
+@orange: @soft-hot-pink;
+@yellow: @soft-text-dark;
+@purple: @soft-purple-darkest;
+@morado: @soft-violet;
 
 :host, .atom-text-editor {
   background-color: @soft-background;
@@ -88,6 +94,8 @@
 }
 
 .entity {
+  // color: @soft-text-emphasis;
+
   &.name.type {
     color: @morado;
 
@@ -106,7 +114,8 @@
   }
 
   &.operator {
-    color: lighten(@orange, 10%);
+    // color: lighten(@orange, 10%);
+    color: @soft-hot-pink;
   }
 
   &.other.special-method {
@@ -123,23 +132,19 @@
 }
 
 .constant {
-  color: @orange;
+  color: @soft-text-dark;
 
   &.character.escape {
-    color: @cyan;
+    color: @soft-text-emphasis;
   }
 
-  &.numeric {
-    color: @orange;
-  }
+  &.numeric {}
 
   &.other.color {
-    color: @cyan;
+    color: @soft-text-emphasis;
   }
 
-  &.other.symbol {
-    color: @orange;
-  }
+  &.other.symbol {}
 }
 
 .variable {
@@ -161,11 +166,11 @@
 }
 
 .string {
-  color: @yellow;
+  color: @soft-text-dark;
 
 
   &.regexp {
-    color: @cyan;
+    color: @soft-text-emphasis;
 
     .source.ruby.embedded {
       color: @orange;
@@ -175,6 +180,14 @@
   &.other.link {
     color: @red;
   }
+}
+.syntax--string.syntax--begin, .syntax--string.syntax--end {
+  color: #fff !important;
+  font-weight: 900;
+  text-shadow:  0 1px 0 @soft-text-dark,
+                0 0 1px @soft-text-dark,
+                0 0 1px @soft-text-dark,
+                0 0 1px @soft-text-dark;
 }
 
 .punctuation {
@@ -219,7 +232,7 @@
   }
 
   &.function  {
-    color: @purple;
+    color: @soft-green;
 
     &.any-method {
       color: @tags;
@@ -227,13 +240,24 @@
   }
 }
 
+// arrow function declaration
+.syntax--arrow {
+  color: @soft-green;
+}
+
+// targets the word "function" when declaring a function
+.syntax--type.syntax--function.syntax--js:not(.syntax--arrow) {
+  font-style: italic;
+  color: #98c4ba;
+}
+
 .entity {
   &.name.function {
-    color: @yellow;
+    color: @soft-green;
   }
 
   &.name.class, &.name.type.class {
-    color: @orange;
+    color: @soft-purple-darker;
   }
 
   &.name.section {
@@ -245,7 +269,7 @@
   }
 
   &.other.attribute-name {
-    color: @orange;
+    color: @soft-text-emphasis;
 
     &.id {
       color: @yellow;
@@ -335,7 +359,7 @@
 // .variable.language.js
 .variable.language {
   // font-weight: 500;
-  color: #e4bcbf;
+  color: @soft-salmon;
 }
 
 
@@ -350,14 +374,11 @@
 .syntax--review,
 .syntax--xxx
  {
-  color: #e4846f;
+  color: @soft-orange;
 }
 
 .bracket-matcher.region {
   border: none !important;
-  background: #dbd5ff !important;
-  background: #a8a4be !important;
-  background: #b3b1bb !important;
   border-radius: 5px;
   background: #fff !important;
   box-shadow:
