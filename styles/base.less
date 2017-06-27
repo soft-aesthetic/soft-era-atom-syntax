@@ -1,13 +1,13 @@
 @import "syntax-variables";
 
 :host, .atom-text-editor {
-  background-color: @syntax-background-color;
-  color: @syntax-text-color;
+  background-color: @soft-background;
+  color: @soft-text;
 }
 
 :host, .atom-text-editor {
-  background-color: @syntax-background-color;
-  color: @syntax-text-color;
+  background-color: @soft-background;
+  color: @soft-text;
 
   .wrap-guide {
     background-color: @syntax-wrap-guide-color;
@@ -22,17 +22,18 @@
   }
 
   .gutter {
-    background-color: @syntax-gutter-background-color;
-    color: @syntax-gutter-text-color;
+    background-color: @soft-background;
+    color: @soft-text-faded;
 
     .line-number {
       &.cursor-line {
-        background-color: @syntax-gutter-background-color-selected;
-        color: @syntax-gutter-text-color-selected;
+        background-color: fade(@soft-purple-light, 50%);
+        color: @soft-purple-darker;
       }
 
       &.cursor-line-no-selection {
-        color: @syntax-gutter-text-color-selected;
+        background-color: transparent;
+        color: @soft-purple-darker;
       }
     }
   }
@@ -44,15 +45,29 @@
   }
 
   .invisible {
-    color: @syntax-text-color;
+    color: @soft-text;
   }
 
   .cursor {
-    color: @syntax-cursor-color;
+    // color: @syntax-cursor-color;
+    border-left: 2px solid rgba(244,129,187,1);
+    border-top: 0;
+    border-bottom: 0;
+  }
+  .cursor:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -1px;
+    width: .55em;
+    height: 100%;
+    background: rgba(244,129,187,.13);
+    -webkit-filter: blur(1px);
+    filter: blur(1px);
   }
 
   .selection .region {
-    background-color: @syntax-selection-color;
+    background-color: @soft-purple-light;
   }
 }
 
@@ -79,7 +94,7 @@
     color: @yellow;
   }
 }
-
+// TODO: HI!
 .keyword {
   color: @tags;
 
@@ -99,9 +114,9 @@
     color: @orange;
   }
 }
-
+// TODO: test
 .storage {
-  color: @cyan;
+  color: @soft-violet;
 }
 
 .constant {
@@ -253,12 +268,12 @@
 
   &.separator {
     background-color: @gray;
-    color: @syntax-text-color;
+    color: @soft-text;
   }
 }
 
 .none {
-  color: @syntax-text-color;
+  color: @soft-text;
 }
 
 .markup {
@@ -310,4 +325,26 @@
 
 .atom-text-editor[mini] .scroll-view {
   padding-left: 1px;
+}
+
+//this, super, etc:
+// .variable.language.js
+.variable.language {
+  // font-weight: 500;
+  color: #e4bcbf;
+}
+
+
+.syntax--todo,
+.syntax--question,
+.syntax--note,
+.syntax--fixme,
+.syntax--changed,
+.syntax--xxx,
+.syntax--idea,
+.syntax--hack,
+.syntax--review,
+.syntax--xxx
+ {
+  color: #e4846f;
 }
