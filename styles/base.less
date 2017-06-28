@@ -14,11 +14,15 @@
   }
 
   .indent-guide {
-    color: @syntax-indent-guide-color;
+    // color: @syntax-invisible-character-color;
+    // color: fade(@soft-text-faded, 50%);
+    color: @soft-light-gray;
   }
 
   .invisible-character {
-    color: @syntax-invisible-character-color;
+    // color: @syntax-invisible-character-color;
+    // color: fade(@soft-text-faded, 50%);
+      color: @soft-light-gray;
   }
 
   .gutter {
@@ -45,7 +49,7 @@
   }
 
   .invisible {
-    color: @soft-text;
+    color: @soft-light-gray;
   }
 
   .cursor {
@@ -370,13 +374,17 @@
 }
 
 .bracket-matcher.region {
-  border: none !important;
+  border: 1px solid #fff;
   border-radius: 5px;
   background: #fff !important;
+  z-index: 1000000;
+  box-sizing: content-box;
+  padding: 4px;
   box-shadow:
-    0px 1px 1px rgba(168,164,190,.74),
-    0px -1px 1px -1px rgba(168,164,190,.3),
-    0px 0px 1px -1px rgba(168,164,190,.9);
+    0px 1px 0px rgba(168,164,190,.35),
+    1px 0px 0px rgba(168,164,190,.35),
+    0px -1px 0px rgba(168,164,190,.35),
+    -1px 0px 0px rgba(168,164,190,.35);
 }
 
 

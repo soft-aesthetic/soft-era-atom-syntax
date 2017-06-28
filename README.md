@@ -80,8 +80,4 @@ Currently only styled with JS, CSS, and HTML in mind.
 
 Happy to hear any input <3
 
-### // TODO:
-- style default indent guides
-- make invisibles more faded out like the punctuation
-
 💖 [@animalphase](https://twitter.com/animalphase) on twitter
