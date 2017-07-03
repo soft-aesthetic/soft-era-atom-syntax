@@ -2,7 +2,7 @@
 
 ### syntax theme for [Atom](https://atom.io/)
 
-🌸 Light pastel syntax theme for soft, warm, cozy, or cute coding. 🌱
+🌸 Light pastel syntax theme for soft, warm, cozy, cute coding. 🌱
 
 Begun by heavily modifying [new era light](https://github.com/juanmnl/new-era-light-syntax-theme).
 
@@ -24,6 +24,17 @@ Begun by heavily modifying [new era light](https://github.com/juanmnl/new-era-li
 ---
 
 ## User stylesheet modifications
+
+### Fixes:
+
+Some UI may cause the cursor to appear as invisible, or the same as the background color, in search boxes. If you have this issue, you can add this to your stylesheet:
+
+```
+.cursor {
+  color: rgba(244,129,187,1);
+  border-left: 2px solid rgba(244,129,187,1) !important;
+}
+```
 
 ### Suggested modifications for the default UI theme (One Light)
 
