@@ -121,7 +121,7 @@
     // color: lighten(@orange, 10%);
     color: @soft-hot-pink;
     font-weight: 500;
-    .value-shadow();
+    // .value-shadow();
   }
 
   &.other.special-method {
@@ -203,18 +203,8 @@
 .syntax--unit {
   color: @soft-hot-pink;
   font-weight: 500;
-  .value-shadow();
+  // .value-shadow();
 }
-// .syntax--string.syntax--begin, .syntax--string.syntax--end {
-//   color: @soft-text-emphasis !important;
-//   font-weight: 900;
-//   -webkit-text-stroke: 1px @soft-text-emphasis;
-//   // text-shadow:
-//   //  -1px -1px 0 @soft-text-emphasis,
-//   //   1px -1px 0 @soft-text-emphasis,
-//   //   -1px 1px 0 @soft-text-emphasis,
-//   //    1px 1px 0 @soft-text-emphasis;
-// }
 
 .punctuation {
   color: @soft-text-faded !important;
@@ -379,6 +369,10 @@
 
 .atom-text-editor[mini] .scroll-view {
   padding-left: 1px;
+}
+
+.syntax--property {
+  color: @soft-violet;
 }
 
 //this, super, etc:
