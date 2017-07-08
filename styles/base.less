@@ -1,5 +1,13 @@
 @import "syntax-variables";
 
+.value-shadow {
+  text-shadow:
+    1px 1px 0 fade(@soft-text-dark, 8%),
+    1px 1px 0 fade(@soft-text-dark, 8%),
+    1px 1px 0 fade(#fff, 100%),
+    1px 1px 0 fade(#fff, 100%);
+}
+
 :host, .atom-text-editor {
   background-color: @soft-background;
   color: @soft-text;
@@ -113,6 +121,7 @@
     // color: lighten(@orange, 10%);
     color: @soft-hot-pink;
     font-weight: 500;
+    .value-shadow();
   }
 
   &.other.special-method {
@@ -178,14 +187,34 @@
     color: @red;
   }
 }
+// .syntax--string.syntax--begin, .syntax--string.syntax--end {
+//   color: #fff !important;
+//   font-weight: 900;
+//   text-shadow:  0 1px 0 @soft-text-dark,
+//                 0 0 1px @soft-text-dark,
+//                 0 0 1px @soft-text-dark,
+//                 0 0 1px @soft-text-dark;
+// }
 .syntax--string.syntax--begin, .syntax--string.syntax--end {
-  color: #fff !important;
+  color: fade(@soft-text-dark, 65%) !important;
   font-weight: 900;
-  text-shadow:  0 1px 0 @soft-text-dark,
-                0 0 1px @soft-text-dark,
-                0 0 1px @soft-text-dark,
-                0 0 1px @soft-text-dark;
+  .value-shadow();
 }
+.syntax--unit {
+  color: @soft-hot-pink;
+  font-weight: 500;
+  .value-shadow();
+}
+// .syntax--string.syntax--begin, .syntax--string.syntax--end {
+//   color: @soft-text-emphasis !important;
+//   font-weight: 900;
+//   -webkit-text-stroke: 1px @soft-text-emphasis;
+//   // text-shadow:
+//   //  -1px -1px 0 @soft-text-emphasis,
+//   //   1px -1px 0 @soft-text-emphasis,
+//   //   -1px 1px 0 @soft-text-emphasis,
+//   //    1px 1px 0 @soft-text-emphasis;
+// }
 
 .punctuation {
   color: @soft-text-faded !important;
