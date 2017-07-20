@@ -83,6 +83,8 @@ atom-text-editor::shadow .comment {
 }
 ```
 
+![soft era syntax theme screenshot](screenshot2.png)
+
 ---
 
 ## Contributing
