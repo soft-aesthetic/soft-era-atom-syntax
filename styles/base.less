@@ -2,8 +2,8 @@
 
 .value-shadow {
   text-shadow:
-    1px 1px 0 fade(@soft-text-dark, 8%),
-    1px 1px 0 fade(@soft-text-dark, 8%),
+    1px 1px 0 fade(@soft-text-dark, 5%),
+    1px 1px 0 fade(@soft-text-dark, 5%),
     1px 1px 0 fade(#fff, 100%),
     1px 1px 0 fade(#fff, 100%);
 }
@@ -115,6 +115,7 @@
 
   &.control {
     color: @soft-blue;
+    font-weight: 500;
   }
 
   &.operator {
@@ -195,10 +196,24 @@
 //                 0 0 1px @soft-text-dark,
 //                 0 0 1px @soft-text-dark;
 // }
+// .syntax--string.syntax--begin, .syntax--string.syntax--end {
+//   color: fade(@soft-text-dark, 65%) !important;
+//   font-weight: 900;
+//   .value-shadow();
+// }
 .syntax--string.syntax--begin, .syntax--string.syntax--end {
-  color: fade(@soft-text-dark, 65%) !important;
+  // color: fade(@soft-text-dark, 65%) !important;
+  // -webkit-text-stroke: 1px white;
+  color: fade(@soft-text-dark, 80%) !important;
   font-weight: 900;
-  .value-shadow();
+  // .value-shadow();
+  text-shadow:
+   -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+     1px 1px 0 #fff,
+     2px 2px 0 fade(@soft-text-dark, 5%),
+     2px 2px 0 fade(@soft-text-dark, 5%);
 }
 .syntax--unit {
   color: @soft-hot-pink;
