@@ -1,19 +1,19 @@
 @import "syntax-variables";
 
 .value-shadow {
-  text-shadow:
-    1px 1px 0 fade(@soft-text-dark, 5%),
-    1px 1px 0 fade(@soft-text-dark, 5%),
-    1px 1px 0 fade(#fff, 100%),
+  text-shadow: 1px 1px 0 fade(@soft-text-dark, 5%),
+    1px 1px 0 fade(@soft-text-dark, 5%), 1px 1px 0 fade(#fff, 100%),
     1px 1px 0 fade(#fff, 100%);
 }
 
-:host, .atom-text-editor {
+:host,
+.atom-text-editor {
   background-color: @soft-background;
   color: @soft-text;
 }
 
-:host, .atom-text-editor {
+:host,
+.atom-text-editor {
   background-color: @soft-background;
   color: @soft-text;
 
@@ -30,7 +30,7 @@
   .invisible-character {
     // color: @syntax-invisible-character-color;
     // color: fade(@soft-text-faded, 50%);
-      color: @soft-light-gray;
+    color: @soft-light-gray;
   }
 
   .gutter {
@@ -62,8 +62,9 @@
 
   .cursor {
     color: @syntax-cursor-color;
-    color: rgba(244,129,187,1);
-    border-left: 2px solid rgba(244,129,187,1) !important;
+    // color: rgba(244, 129, 187, 1);
+    border-left: 2px solid rgba(244, 129, 187, 1) !important;
+    // border-left: 2px solid @soft-salmon !important;
     border-top: 0;
     border-bottom: 0;
   }
@@ -74,7 +75,8 @@
     left: -1px;
     width: .55em;
     height: 100%;
-    background: rgba(244,129,187,.13);
+    background: rgba(244, 129, 187, .13);
+    // background: fade(@soft-salmon, .6);
     -webkit-filter: blur(1px);
     filter: blur(1px);
   }
@@ -102,7 +104,6 @@
 
   &.name.type {
     color: @morado;
-
   }
 
   &.other.inherited-class {
@@ -145,13 +146,15 @@
     color: @soft-text-emphasis;
   }
 
-  &.numeric {}
+  &.numeric {
+  }
 
   &.other.color {
     color: @soft-text-emphasis;
   }
 
-  &.other.symbol {}
+  &.other.symbol {
+  }
 }
 
 .variable {
@@ -174,7 +177,6 @@
 
 .string {
   color: @soft-text-dark;
-
 
   &.regexp {
     color: @soft-text-emphasis;
@@ -201,19 +203,16 @@
 //   font-weight: 900;
 //   .value-shadow();
 // }
-.syntax--string.syntax--begin, .syntax--string.syntax--end {
+.syntax--string.syntax--begin,
+.syntax--string.syntax--end {
   // color: fade(@soft-text-dark, 65%) !important;
   // -webkit-text-stroke: 1px white;
   color: fade(@soft-text-dark, 80%) !important;
   font-weight: 900;
   // .value-shadow();
-  text-shadow:
-   -1px -1px 0 #fff,
-    1px -1px 0 #fff,
-    -1px 1px 0 #fff,
-     1px 1px 0 #fff,
-     2px 2px 0 fade(@soft-text-dark, 5%),
-     2px 2px 0 fade(@soft-text-dark, 5%);
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+    1px 1px 0 #fff, 2px 2px 0 fade(@soft-text-dark, 5%),
+    2px 2px 0 fade(@soft-text-dark, 5%);
 }
 .syntax--unit {
   color: @soft-hot-pink;
@@ -254,7 +253,6 @@
   &.section.embedded {
     color: darken(@red, 10%);
   }
-
 }
 
 .support {
@@ -262,7 +260,7 @@
     color: @morado;
   }
 
-  &.function  {
+  &.function {
     color: @soft-green;
 
     &.any-method {
@@ -287,7 +285,8 @@
     color: @soft-green;
   }
 
-  &.name.class, &.name.type.class {
+  &.name.class,
+  &.name.type.class {
     color: @soft-purple-darker;
   }
 
@@ -397,7 +396,6 @@
   color: @soft-purple-default;
 }
 
-
 .syntax--todo,
 .syntax--question,
 .syntax--note,
@@ -407,8 +405,7 @@
 .syntax--idea,
 .syntax--hack,
 .syntax--review,
-.syntax--xxx
- {
+.syntax--xxx {
   color: @soft-orange;
 }
 
@@ -419,21 +416,17 @@
   z-index: 1000000;
   box-sizing: content-box;
   padding: 4px;
-  box-shadow:
-    0px 1px 0px rgba(168,164,190,.35),
-    1px 0px 0px rgba(168,164,190,.35),
-    0px -1px 0px rgba(168,164,190,.35),
-    -1px 0px 0px rgba(168,164,190,.35);
+  box-shadow: 0px 1px 0px rgba(168, 164, 190, .35),
+    1px 0px 0px rgba(168, 164, 190, .35), 0px -1px 0px rgba(168, 164, 190, .35),
+    -1px 0px 0px rgba(168, 164, 190, .35);
 }
-
 
 // otherwise unstyled text passed as arguments,
 .syntax--variable.syntax--parameter.syntax--function.syntax--js,
 atom-text-editor::shadow .meta.arguments.js,
 .syntax--parameter,
 .syntax--function.syntax--parameter,
-.syntax--variable.syntax--parameter.syntax--function
-{
+.syntax--variable.syntax--parameter.syntax--function {
   color: @soft-salmon;
   // color: @soft-red;
   color: @soft-red-faded;
@@ -445,8 +438,7 @@ atom-text-editor::shadow .meta.arguments.js .syntax--brace,
 .syntax--parameter .syntax--brace,
 .syntax--arguments .syntax--punctuation,
 .syntax--function.syntax--parameter .syntax--brace,
-.syntax--variable.syntax--parameter.syntax--function .syntax--brace
-{
+.syntax--variable.syntax--parameter.syntax--function .syntax--brace {
   color: @soft-salmon;
   color: @soft-red-faded;
 }
@@ -455,4 +447,7 @@ atom-text-editor::shadow .meta.arguments.js .syntax--brace,
 .syntax--arguments .syntax--punctuation:not(.syntax--definition) {
   color: @soft-salmon !important;
   color: @soft-red-faded !important;
+}
+.syntax--constant.syntax--other {
+  color: inherit;
 }
