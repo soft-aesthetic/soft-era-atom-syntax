@@ -410,14 +410,30 @@
 }
 
 .bracket-matcher.region {
-  border: 1px solid #fff;
+  background: none;
+  border: none;
+}
+.bracket-matcher.region::after {
+  content: '';
+  display: block;
+  width: 140%;
+  height: 100%;
+  // padding: 6px;
+  position: relative;
+  top: 0px;
+  left: -1px;
+  box-sizing: border-box;
+  border: 2px solid #fff;
   border-radius: 5px;
   background: #fff !important;
   z-index: 1000000;
-  box-sizing: content-box;
-  padding: 4px;
-  box-shadow: 0px 1px 0px rgba(168, 164, 190, .35),
-    1px 0px 0px rgba(168, 164, 190, .35), 0px -1px 0px rgba(168, 164, 190, .35),
+  // box-shadow: 0px 1px 0px rgba(168, 164, 190, .35),
+  //   1px 0px 0px rgba(168, 164, 190, .35), 0px -1px 0px rgba(168, 164, 190, .35),
+  //   -1px 0px 0px rgba(168, 164, 190, .35);
+  // box-shadow: 0px 1px 0px rgba(255, 255, 255, .3),
+  //   1px 0px 0px rgba(255, 255, 255, .3), 0px -1px 0px rgba(255, 255, 255, .3),
+  //   -1px 0px 0px rgba(255, 255, 255, .3);
+  box-shadow: 1px 0px 0px rgba(168, 164, 190, .35),
     -1px 0px 0px rgba(168, 164, 190, .35);
 }
 
