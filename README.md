@@ -89,6 +89,9 @@ atom-text-editor::shadow .comment {
 
 ## Contributing
 
+TODO:
+- move all color definitions into one place, written in a standardized way, to make it easier to keep track, make alternate versions of the theme, and port to other programs.
+
 Currently only styled with JS, CSS, and HTML in mind.
 
 Happy to hear any input <3
