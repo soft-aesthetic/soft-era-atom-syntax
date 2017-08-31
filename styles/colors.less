@@ -44,3 +44,29 @@
 
 @syntax-cursor-color: rgba(244, 129, 187, 1);
 @syntax-invisible-character-color: @soft-light-gray;
+
+@syntax-selection-flash-color: @soft-green;
+
+@-webkit-keyframes flash {
+  from { background-color: @syntax-selection-flash-color; }
+  to { background-color: null; }
+}
+
+// .highlight.current-result {
+//   // border-color: #fff;
+//   // border-width: 2px;
+// }
+// .highlight.find-result {
+//   //  border: 2px solid @soft-text-dark;
+//  }
+
+ // .editor .current-result .region{
+ //   border: 2px solid #fff;
+ //   margin: -2px;
+ //   padding: 0 4px 4px 0;
+ // }
+ // .editor .find-result .region {
+ //  border: 2px solid @soft-text-emphasis;
+ //  margin: -2px;
+ //  padding: 0 4px 4px 0;
+ // }

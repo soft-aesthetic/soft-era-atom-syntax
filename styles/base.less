@@ -166,7 +166,8 @@
   }
 
   &.parameter.function {
-    color: @soft-red !important; // prevent parameter definition color from being overwritten by argument colors below
+    // color: @soft-red !important; // prevent parameter definition color from being overwritten by argument colors below
+    color: @soft-red-faded !important; // prevent parameter definition color from being overwritten by argument colors below
   }
 }
 
@@ -188,6 +189,11 @@
 
   &.other.link {
     color: @red;
+  }
+
+  .syntax--js,
+  .syntax--embedded {
+    color: @soft-text;
   }
 }
 // .syntax--string.syntax--begin, .syntax--string.syntax--end {
@@ -440,14 +446,16 @@
 // otherwise unstyled text passed as arguments,
 .syntax--variable.syntax--parameter.syntax--function.syntax--js,
 atom-text-editor::shadow .meta.arguments.js,
-.syntax--parameter,
+// .syntax--parameter,
 .syntax--function.syntax--parameter,
 .syntax--variable.syntax--parameter.syntax--function {
   color: @soft-salmon;
   // color: @soft-red;
-  color: @soft-red-faded;
+  // color: @soft-red-faded;
   // color: @soft-red-faded !important;
 }
+
+
 // punctuation for things passed as arguments
 .syntax--variable.syntax--parameter.syntax--function.syntax--js .syntax--brace,
 atom-text-editor::shadow .meta.arguments.js .syntax--brace,
@@ -456,13 +464,13 @@ atom-text-editor::shadow .meta.arguments.js .syntax--brace,
 .syntax--function.syntax--parameter .syntax--brace,
 .syntax--variable.syntax--parameter.syntax--function .syntax--brace {
   color: @soft-salmon;
-  color: @soft-red-faded;
+  // color: @soft-red-faded;
 }
 
 // targets the curly braces of an empty js object being passed as an arguments
 .syntax--arguments .syntax--punctuation:not(.syntax--definition) {
   color: @soft-salmon !important;
-  color: @soft-red-faded !important;
+  // color: @soft-red-faded !important;
 }
 .syntax--constant.syntax--other {
   color: inherit;
