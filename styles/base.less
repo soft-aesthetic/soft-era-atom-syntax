@@ -10,27 +10,18 @@
 .atom-text-editor {
   background-color: @soft-background;
   color: @soft-text;
-}
-
-:host,
-.atom-text-editor {
-  background-color: @soft-background;
-  color: @soft-text;
+  // color: @syntax-text-color;
 
   .wrap-guide {
     background-color: @syntax-wrap-guide-color;
   }
 
   .indent-guide {
-    // color: @syntax-invisible-character-color;
-    // color: fade(@soft-text-faded, 50%);
-    color: @soft-light-gray;
+    color: @syntax-invisible-character-color;
   }
 
   .invisible-character {
-    // color: @syntax-invisible-character-color;
-    // color: fade(@soft-text-faded, 50%);
-    color: @soft-light-gray;
+    color: @syntax-invisible-character-color;
   }
 
   .gutter {
@@ -57,34 +48,61 @@
   }
 
   .invisible {
-    color: @soft-light-gray;
+    color: @syntax-invisible-character-color;
   }
 
   .cursor {
     color: @syntax-cursor-color;
     // color: rgba(244, 129, 187, 1);
-    border-left: 2px solid rgba(244, 129, 187, 1) !important;
+    // border-left: 2px solid rgba(244, 129, 187, 1) !important;
+    border-left: 2px solid @syntax-cursor-color !important;
     // border-left: 2px solid @soft-salmon !important;
     border-top: 0;
     border-bottom: 0;
+    left: -1px;
   }
   .cursor:after {
     content: '';
     display: block;
     position: absolute;
-    left: -1px;
-    width: .55em;
+    left: -2px;
+    width: .7em;
     height: 100%;
-    background: rgba(244, 129, 187, .13);
-    // background: fade(@soft-salmon, .6);
-    -webkit-filter: blur(1px);
-    filter: blur(1px);
+    // background: rgba(244, 129, 187, .13);
+    background: @syntax-cursor-color;
+    opacity: .25;
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
   }
 
   .selection .region {
-    background-color: @soft-purple-light;
+    background-color: @syntax-selection-color;
   }
 }
+
+@-webkit-keyframes flash {
+  from { background-color: @syntax-selection-flash-color; }
+  to { background-color: null; }
+}
+
+// .highlight.current-result {
+//   // border-color: #fff;
+//   // border-width: 2px;
+// }
+// .highlight.find-result {
+//   //  border: 2px solid @soft-text-dark;
+//  }
+
+ // .editor .current-result .region{
+ //   border: 2px solid #fff;
+ //   margin: -2px;
+ //   padding: 0 4px 4px 0;
+ // }
+ // .editor .find-result .region {
+ //  border: 2px solid @soft-text-emphasis;
+ //  margin: -2px;
+ //  padding: 0 4px 4px 0;
+ // }
 
 .atom-text-editor .search-results .marker .region {
   background-color: transparent;

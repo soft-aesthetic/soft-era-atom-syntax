@@ -23,6 +23,8 @@
 @soft-red-faded: #db90a7;
 @soft-green: #25b7b8;
 @soft-green-faded: #98c4ba;
+@soft-yellow: #ede7c5;
+@soft-yellow-darker: #CABF9A;
 
 @lighter-gray: #c5c8c6;
 @light-gray: rgba(157, 157, 157, 0.6);
@@ -31,42 +33,13 @@
 @very-dark-gray: #1d1f21;
 @black: #4a4a4a;
 @white: #ffffff;
-@selection: rgba(255, 246, 84, 0.9);
+@selection: @soft-purple-light;
 
 @background: @soft-background;
 @cyan: @soft-blue;
 @tags: @soft-red-faded;
 @purple: @soft-purple-darkest;
-@yellow: @soft-text-dark;
+@yellow: @soft-yellow-darker;
 @red: @soft-red;
 @orange: @soft-hot-pink;
 @morado: @soft-violet;
-
-@syntax-cursor-color: rgba(244, 129, 187, 1);
-@syntax-invisible-character-color: @soft-light-gray;
-
-@syntax-selection-flash-color: @soft-green;
-
-@-webkit-keyframes flash {
-  from { background-color: @syntax-selection-flash-color; }
-  to { background-color: null; }
-}
-
-// .highlight.current-result {
-//   // border-color: #fff;
-//   // border-width: 2px;
-// }
-// .highlight.find-result {
-//   //  border: 2px solid @soft-text-dark;
-//  }
-
- // .editor .current-result .region{
- //   border: 2px solid #fff;
- //   margin: -2px;
- //   padding: 0 4px 4px 0;
- // }
- // .editor .find-result .region {
- //  border: 2px solid @soft-text-emphasis;
- //  margin: -2px;
- //  padding: 0 4px 4px 0;
- // }
