@@ -2,11 +2,12 @@
 
 .value-shadow {
   text-shadow: 1px 1px 0 fade(@soft-text-dark, 5%),
-    1px 1px 0 fade(@soft-text-dark, 5%), 1px 1px 0 fade(#fff, 100%),
+    1px 1px 0 fade(@soft-text-dark, 5%),
+    1px 1px 0 fade(#fff, 100%),
     1px 1px 0 fade(#fff, 100%);
 }
 
-:host,
+atom-text-editor,
 .atom-text-editor {
   background-color: @soft-background;
   color: @soft-text;
@@ -53,22 +54,18 @@
 
   .cursor {
     color: @syntax-cursor-color;
-    // color: rgba(244, 129, 187, 1);
-    // border-left: 2px solid rgba(244, 129, 187, 1) !important;
     border-left: 2px solid @syntax-cursor-color !important;
-    // border-left: 2px solid @soft-salmon !important;
     border-top: 0;
     border-bottom: 0;
-    left: -1px;
+    left: 0px;
   }
   .cursor:after {
     content: '';
     display: block;
     position: absolute;
-    left: -2px;
+    left: -1px;
     width: .7em;
     height: 100%;
-    // background: rgba(244, 129, 187, .13);
     background: @syntax-cursor-color;
     opacity: .25;
     -webkit-filter: blur(2px);
@@ -184,7 +181,6 @@
   }
 
   &.parameter.function {
-    // color: @soft-red !important; // prevent parameter definition color from being overwritten by argument colors below
     color: @soft-red-faded !important; // prevent parameter definition color from being overwritten by argument colors below
   }
 }
@@ -194,7 +190,11 @@
   color: @syntax-background-color;
 }
 
-.string {
+// atom-pane[] .string[not=".syntax--json"] {
+// .string:not([class*='.json']) {
+// atom-pane:not([data-active-item-name*=".json"]) .string {
+:not(".syntax--key") .string {
+// .string {
   color: @soft-text-dark;
 
   &.regexp {
@@ -222,16 +222,12 @@
 //                 0 0 1px @soft-text-dark,
 //                 0 0 1px @soft-text-dark;
 // }
-// .syntax--string.syntax--begin, .syntax--string.syntax--end {
-//   color: fade(@soft-text-dark, 65%) !important;
-//   font-weight: 900;
-//   .value-shadow();
-// }
+// atom-pane:not([data-active-item-name*=".json"]) .syntax--string.syntax--begin,
+// atom-pane:not([data-active-item-name*=".json"]) .syntax--string.syntax--end {
 .syntax--string.syntax--begin,
 .syntax--string.syntax--end {
-  // color: fade(@soft-text-dark, 65%) !important;
-  // -webkit-text-stroke: 1px white;
-  color: fade(@soft-text-dark, 80%) !important;
+  // color: fade(@soft-text-dark, 80%) !important;
+  opacity: .8;
   font-weight: 900;
   // .value-shadow();
   text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
@@ -244,19 +240,21 @@
   // .value-shadow();
 }
 
-.punctuation {
-  color: @soft-text-faded !important;
+
+
+.punctuation[not=".syntax--string.syntax--begin"][not=".syntax--string.syntax--end"] {
+  color: @soft-text-faded;
   &.definition {
     &.comment {
       color: @light-gray;
     }
 
-    &.string,
-    &.variable,
-    &.parameters,
-    &.array {
-      color: @soft-red;
-    }
+    // &.string,
+    // &.variable,
+    // &.parameters,
+    // &.array {
+    //   color: @soft-red;
+    // }
 
     &.heading,
     &.identity {
@@ -310,8 +308,10 @@
   }
 
   &.name.class,
-  &.name.type.class {
+  &.name.type.class,
+   {
     color: @soft-purple-darker;
+    color: @morado;
   }
 
   &.name.section {
@@ -468,28 +468,62 @@ atom-text-editor::shadow .meta.arguments.js,
 .syntax--function.syntax--parameter,
 .syntax--variable.syntax--parameter.syntax--function {
   color: @soft-salmon;
-  // color: @soft-red;
-  // color: @soft-red-faded;
-  // color: @soft-red-faded !important;
 }
 
 
 // punctuation for things passed as arguments
+// .syntax--variable.syntax--parameter.syntax--function.syntax--js .syntax--brace,
+// atom-text-editor::shadow .meta.arguments.js .syntax--brace,
+// .syntax--parameter .syntax--brace,
+// .syntax--arguments .syntax--punctuation,
+// .syntax--function.syntax--parameter .syntax--brace,
+// .syntax--variable.syntax--parameter.syntax--function .syntax--brace {
+// .syntax--variable.syntax--parameter.syntax--function.syntax--js .syntax--brace,
+// atom-text-editor::shadow .meta.arguments.js .syntax--brace,
+// .syntax--parameter .syntax--brace,
+// .syntax--arguments .syntax--punctuation,
+// .syntax--function.syntax--parameter .syntax--brace,
+// .syntax--variable.syntax--parameter.syntax--function .syntax--brace {
 .syntax--variable.syntax--parameter.syntax--function.syntax--js .syntax--brace,
-atom-text-editor::shadow .meta.arguments.js .syntax--brace,
+atom-text-editor.editor .syntax--meta.syntax--arguments.syntax--js .syntax--brace,
 .syntax--parameter .syntax--brace,
-.syntax--arguments .syntax--punctuation,
-.syntax--function.syntax--parameter .syntax--brace,
+.syntax--arguments .syntax--punctuation, .syntax--function.syntax--parameter .syntax--brace,
 .syntax--variable.syntax--parameter.syntax--function .syntax--brace {
   color: @soft-salmon;
-  // color: @soft-red-faded;
 }
 
 // targets the curly braces of an empty js object being passed as an arguments
 .syntax--arguments .syntax--punctuation:not(.syntax--definition) {
   color: @soft-salmon !important;
-  // color: @soft-red-faded !important;
 }
 .syntax--constant.syntax--other {
   color: inherit;
 }
+.syntax--key,
+.syntax--key.syntax--json,
+.syntax--class {
+  color: @soft-purple-darker !important;
+  color: @morado !important;
+}
+.syntax--property-name {
+  color: @soft-text-emphasis;
+  color: @soft-text-dark;
+}
+.syntax--value {
+  // .syntax--json,
+  .syntax--js,
+  .syntax--string,
+  .syntax--quoted,
+  .syntax--single,
+  .syntax--double
+  {
+    color: @soft-text-dark;
+  }
+}
+.syntax--js.syntax--string {
+  color: @soft-text-dark;
+}
+// .syntax--js[not=".syntax--operator"][not=".syntax--keyword"][not=".syntax--assignment"],
+// .syntax--function {
+//   color: @soft-green;
+// }
