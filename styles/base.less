@@ -193,8 +193,8 @@ atom-text-editor,
 // atom-pane[] .string[not=".syntax--json"] {
 // .string:not([class*='.json']) {
 // atom-pane:not([data-active-item-name*=".json"]) .string {
-:not(".syntax--key") .string {
-// .string {
+// :not(".syntax--key") .string {
+.string {
   color: @soft-text-dark;
 
   &.regexp {
@@ -209,25 +209,16 @@ atom-text-editor,
     color: @red;
   }
 
-  .syntax--js,
-  .syntax--embedded {
-    color: @soft-text;
-  }
+  // .syntax--js,
+  // .syntax--embedded {
+  //   color: @soft-text;
+  // }
 }
 
-// .syntax--string.syntax--begin, .syntax--string.syntax--end {
-//   color: #fff !important;
-//   font-weight: 900;
-//   text-shadow:  0 1px 0 @soft-text-dark,
-//                 0 0 1px @soft-text-dark,
-//                 0 0 1px @soft-text-dark,
-//                 0 0 1px @soft-text-dark;
-// }
-// atom-pane:not([data-active-item-name*=".json"]) .syntax--string.syntax--begin,
-// atom-pane:not([data-active-item-name*=".json"]) .syntax--string.syntax--end {
 .syntax--string.syntax--begin,
 .syntax--string.syntax--end {
   // color: fade(@soft-text-dark, 80%) !important;
+  color: inherit !important;
   opacity: .8;
   font-weight: 900;
   // .value-shadow();
@@ -235,12 +226,12 @@ atom-text-editor,
     1px 1px 0 #fff, 2px 2px 0 fade(@soft-text-dark, 5%),
     2px 2px 0 fade(@soft-text-dark, 5%);
 }
+
 .syntax--unit {
   color: @soft-hot-pink;
   font-weight: 500;
   // .value-shadow();
 }
-
 
 
 .punctuation[not=".syntax--string.syntax--begin"][not=".syntax--string.syntax--end"] {
@@ -473,18 +464,6 @@ atom-text-editor::shadow .meta.arguments.js,
 
 
 // punctuation for things passed as arguments
-// .syntax--variable.syntax--parameter.syntax--function.syntax--js .syntax--brace,
-// atom-text-editor::shadow .meta.arguments.js .syntax--brace,
-// .syntax--parameter .syntax--brace,
-// .syntax--arguments .syntax--punctuation,
-// .syntax--function.syntax--parameter .syntax--brace,
-// .syntax--variable.syntax--parameter.syntax--function .syntax--brace {
-// .syntax--variable.syntax--parameter.syntax--function.syntax--js .syntax--brace,
-// atom-text-editor::shadow .meta.arguments.js .syntax--brace,
-// .syntax--parameter .syntax--brace,
-// .syntax--arguments .syntax--punctuation,
-// .syntax--function.syntax--parameter .syntax--brace,
-// .syntax--variable.syntax--parameter.syntax--function .syntax--brace {
 .syntax--variable.syntax--parameter.syntax--function.syntax--js .syntax--brace,
 atom-text-editor.editor .syntax--meta.syntax--arguments.syntax--js .syntax--brace,
 .syntax--parameter .syntax--brace,
@@ -501,10 +480,9 @@ atom-text-editor.editor .syntax--meta.syntax--arguments.syntax--js .syntax--brac
   color: inherit;
 }
 .syntax--key,
-.syntax--key.syntax--json,
+.syntax--key .string,
 .syntax--class {
-  color: @soft-purple-darker !important;
-  color: @morado !important;
+  color: @morado;
 }
 .syntax--property-name {
   color: @soft-text-emphasis;
@@ -521,18 +499,11 @@ atom-text-editor.editor .syntax--meta.syntax--arguments.syntax--js .syntax--brac
     color: @soft-text-dark;
   }
 }
-.syntax--js.syntax--string {
-  color: @soft-text-dark;
-}
-// .syntax--js[not=".syntax--operator"][not=".syntax--keyword"][not=".syntax--assignment"],
-// .syntax--function {
-//   color: @soft-green;
-// }
 
 // style for svg files:
-atom-pane[data-active-item-name*=".svg"] {
-  atom-text-editor,
-  .atom-text-editor {
-    color: @soft-text-emphasis;
-  }
-}
+// atom-pane[data-active-item-name*=".svg"] {
+//   atom-text-editor,
+//   .atom-text-editor {
+//     color: @soft-text-emphasis;
+//   }
+// }
