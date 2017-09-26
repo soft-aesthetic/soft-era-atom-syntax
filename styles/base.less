@@ -198,7 +198,7 @@ atom-text-editor,
   color: @soft-text-dark;
 
   &.regexp {
-    color: @soft-text-emphasis;
+    // color: @soft-text-emphasis;
 
     .source.ruby.embedded {
       color: @orange;
@@ -214,17 +214,63 @@ atom-text-editor,
   //   color: @soft-text;
   // }
 }
-
+.syntax--string {
+  // border-bottom: 1px dashed #aaa;
+  // border-bottom: 1px dashed #e2e2e2;
+}
 .syntax--string.syntax--begin,
 .syntax--string.syntax--end {
-  // color: fade(@soft-text-dark, 80%) !important;
+  color: fade(@soft-text-dark, 80%);
   color: inherit !important;
   opacity: .8;
-  font-weight: 900;
+  position: relative;
+  font-style: italic;
+  // font-weight: 900;
+  // border-bottom: 1px dashed #e2e2e2;
+  // border-bottom: 1px dashed #ece8e8;
+  // border-bottom: 1px solid @soft-background;
   // .value-shadow();
-  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
-    1px 1px 0 #fff, 2px 2px 0 fade(@soft-text-dark, 5%),
-    2px 2px 0 fade(@soft-text-dark, 5%);
+  // text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+  //   1px 1px 0 #fff, 2px 2px 0 fade(@soft-text-dark, 5%),
+  //   2px 2px 0 fade(@soft-text-dark, 5%);
+  // text-shadow:
+  //   1px 1px 0 fade(@soft-text-emphasis, 45%);
+    // 2px 2px 0 fade(@soft-text-dark, 5%),
+    // 2px 2px 0 fade(@soft-text-dark, 5%);
+
+  &::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: .4em solid;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    position: absolute;
+    top: 20%;
+    opacity: .08;
+  }
+}
+.syntax--string.syntax--begin::before {
+  border-right: none;
+  right: -.1em;
+}
+.syntax--string.syntax--end::before {
+  border-left: none;
+  left: -.1em;
+}
+
+.syntax--string.syntax--begin {
+  // text-shadow:
+  //   1px 1px 0 fade(@soft-text-emphasis, 45%);
+    // 2px 2px 0 fade(@soft-text-dark, 5%),
+    // 2px 2px 0 fade(@soft-text-dark, 5%);
+}
+.syntax--string.syntax--end {
+  // text-shadow:
+  //   -1px 1px 0 fade(@soft-text-emphasis, 45%);
+    // -2px 2px 0 fade(@soft-text-dark, 5%),
+    // -2px 2px 0 fade(@soft-text-dark, 5%);
 }
 
 .syntax--unit {
