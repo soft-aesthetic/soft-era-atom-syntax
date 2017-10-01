@@ -9,9 +9,8 @@
 
 atom-text-editor,
 .atom-text-editor {
-  background-color: @soft-background;
-  color: @soft-text;
-  // color: @syntax-text-color;
+  background-color: @background;
+  color: @syntax-code-color;
 
   .wrap-guide {
     background-color: @syntax-wrap-guide-color;
@@ -26,18 +25,18 @@ atom-text-editor,
   }
 
   .gutter {
-    background-color: @soft-background;
-    color: @soft-text-faded;
+    background-color: @background;
+    color: @syntax-gutter-text-color;
 
     .line-number {
       &.cursor-line {
-        background-color: fade(@soft-purple-light, 50%);
-        color: @soft-purple-darker;
+        background-color: @syntax-gutter-background-color-selected;
+        color: @syntax-gutter-text-color-selected;
       }
 
       &.cursor-line-no-selection {
         background-color: transparent;
-        color: @soft-purple-darker;
+        color: @syntax-gutter-text-color-selected;
       }
     }
   }
@@ -82,7 +81,7 @@ atom-text-editor,
 }
 
 .entity {
-  color: @soft-text-emphasis;
+  color: @text-code-emphasized;
 
   &.name.type {
     color: @morado;
@@ -125,14 +124,14 @@ atom-text-editor,
   color: @soft-text-dark;
 
   &.character.escape {
-    color: @soft-text-emphasis;
+    color: @text-code-emphasized;
   }
 
   &.numeric {
   }
 
   &.other.color {
-    color: @soft-text-emphasis;
+    color: @text-code-emphasized;
   }
 
   &.other.symbol {
@@ -198,7 +197,7 @@ atom-text-editor,
   color: @soft-text-dark;
 
   &.regexp {
-    // color: @soft-text-emphasis;
+    // color: @text-code-emphasized;
 
     .source.ruby.embedded {
       color: @orange;
@@ -234,7 +233,7 @@ atom-text-editor,
   //   1px 1px 0 #fff, 2px 2px 0 fade(@soft-text-dark, 5%),
   //   2px 2px 0 fade(@soft-text-dark, 5%);
   // text-shadow:
-  //   1px 1px 0 fade(@soft-text-emphasis, 45%);
+  //   1px 1px 0 fade(@text-code-emphasized, 45%);
     // 2px 2px 0 fade(@soft-text-dark, 5%),
     // 2px 2px 0 fade(@soft-text-dark, 5%);
 
@@ -262,13 +261,13 @@ atom-text-editor,
 
 .syntax--string.syntax--begin {
   // text-shadow:
-  //   1px 1px 0 fade(@soft-text-emphasis, 45%);
+  //   1px 1px 0 fade(@text-code-emphasized, 45%);
     // 2px 2px 0 fade(@soft-text-dark, 5%),
     // 2px 2px 0 fade(@soft-text-dark, 5%);
 }
 .syntax--string.syntax--end {
   // text-shadow:
-  //   -1px 1px 0 fade(@soft-text-emphasis, 45%);
+  //   -1px 1px 0 fade(@text-code-emphasized, 45%);
     // -2px 2px 0 fade(@soft-text-dark, 5%),
     // -2px 2px 0 fade(@soft-text-dark, 5%);
 }
@@ -361,7 +360,7 @@ atom-text-editor,
   }
 
   &.other.attribute-name {
-    color: @soft-text-emphasis;
+    color: @text-code-emphasized;
 
     &.id {
       color: @yellow;
@@ -531,7 +530,7 @@ atom-text-editor.editor .syntax--meta.syntax--arguments.syntax--js .syntax--brac
   color: @morado;
 }
 .syntax--property-name {
-  color: @soft-text-emphasis;
+  // color: @text-code-emphasized;
   color: @soft-text-dark;
 }
 .syntax--value {
@@ -550,6 +549,6 @@ atom-text-editor.editor .syntax--meta.syntax--arguments.syntax--js .syntax--brac
 // atom-pane[data-active-item-name*=".svg"] {
 //   atom-text-editor,
 //   .atom-text-editor {
-//     color: @soft-text-emphasis;
+//     color: @text-code-emphasized;
 //   }
 // }

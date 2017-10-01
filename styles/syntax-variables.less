@@ -4,7 +4,9 @@
 // include a syntax-variables.less file.
 
 // General colors
-@syntax-text-color: @morado;
+@syntax-text-color: @text-other;
+@syntax-code-color: @text-code;
+@syntax-code-emphasized-color: @text-code-emphasized;
 @syntax-cursor-color: @soft-salmon;
 @syntax-selection-color: @selection;
 @syntax-background-color: @background;
@@ -20,10 +22,10 @@
 @syntax-selection-flash-color: @soft-green;
 
 // Gutter colors
-@syntax-gutter-text-color: @morado;
-@syntax-gutter-text-color-selected: @orange;
-@syntax-gutter-background-color: darken(@background, 5%);
-@syntax-gutter-background-color-selected: lighten(@background, 10%);
+@syntax-gutter-text-color: @soft-text-faded;
+@syntax-gutter-text-color-selected: @soft-purple-darker;
+@syntax-gutter-background-color: @background;
+@syntax-gutter-background-color-selected: fade(@soft-purple-light, 50%);
 
 // For git diff info. i.e. in the gutter
 @syntax-color-renamed: @soft-orange;
