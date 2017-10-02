@@ -90,13 +90,15 @@ atom-text-editor::shadow .comment {
 ## Contributing
 
 ### TODO:
-- create variable for operator and whatever other `@soft-` is stil in use in the base.less file
+- ~~create variable for operator and whatever other `@soft-` is still in use in the base.less file~~
 - has deprecations, pull in new version of atom one theme to tweak?
-  - if that doesn't work, just update slectors in this theme
+- if that doesn't work, just update selectors in this theme
+- see about removing all direct color variables like `@cyan` from base.less`
 - move all color definitions into one place, written in a standardized way, to make it easier to keep track, make alternate versions of the theme, and port to other programs.
+  - verify this is being done in the best way to match up with the latest theme code
 - separate out "special treatments" and overrides. (most are currently at bottom of file, but there are some atom-specific treatments like before and after elements - should think if it's appropriate to pull these out?)
 
-Currently only styled with JS, CSS, and HTML in mind.
+Currently styled with `.js`, `.css`, `.html`, `.json`, `.svg` files in mind.
 
 Happy to hear any input <3
 
