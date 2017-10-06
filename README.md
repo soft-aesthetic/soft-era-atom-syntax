@@ -109,7 +109,11 @@ atom-text-editor::shadow .comment {
   - [ ] these seem to be a bit of a mess and first fixing some of the package support/conflicts above may help this organization
 - [ ] nicer clickable link treatment (for markdown previews and wherever else they are clickable)
 
-Currently styled with `.js`, `.css`, `.html`, `.json`, `.svg` files in mind.
+Much of this cleanup and organization is in the push to make this theme easier to 1) organize for porting to other editors, and 2) using the same organizational thought behind the syntax highlighting to quickly create other themes.
+
+---
+
+Currently styled with `.js`, `.css`, `.html`, `.json`, `.md`, `.svg` files in mind as that's my main use case. Would like to hear more about other files/languages.
 
 Happy to hear any input <3
 
