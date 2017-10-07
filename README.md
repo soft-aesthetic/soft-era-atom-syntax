@@ -97,6 +97,7 @@ atom-text-editor::shadow .comment {
 - [ ] build in better support for  `language-babel`
   - [ ] theme selectors, particularly special javascript selectors, are built with the `react` way of handling things—this should not be treated as primary since it isn't default
   - [ ] see how styling works **without either of these packages activated**
+- [ ] parameter vs arguments are fucked up
 - [ ] determine other packages that require or would benefit from specific support.
   - [ ] group these into separate .less files. currently there are already special styles for the `indent-guide-improved` package, inside of `index.less`
 - [ ] make html tag punctuation and text same color? (maybe depend on determining the differences of above-named packages)
