@@ -114,18 +114,22 @@ Much of this cleanup and organization is in the push to make this theme easier t
 
 ---
 
-Steps for cloning a repo from http://flight-manual.atom.io/hacking-atom/sections/creating-a-theme/#creating-a-ui-theme
+**Steps for cloning a repo** from http://flight-manual.atom.io/hacking-atom/sections/creating-a-theme/#creating-a-ui-theme
 
-*if the editor loses track of the local working copy of this (or any theme), follow steps `3` – `9`*
+*if the editor loses track of the local working copy of this (or any) theme, follow steps `3` – `9`*
 
-1. Fork the ui-theme-template
+**must use `apm link` instead of `apm link --dev`** for this local theme to work in normal, non-dev editor instances.
+
+(using `--dev` is a "safe mode" which will prevent the theme from activating in a normal window, in case you break something while editing.)
+
+1. Fork the ui-theme-template [or this theme, if this is what you're forking]
 1. Clone the forked repository to the local filesystem
 1. Open a terminal in the forked theme's directory
-1. Open your new theme in a Dev Mode Atom window run atom --dev . in the terminal or use the View > Developer > Open in Dev Mode menu
+1. Open your new theme in a Dev Mode Atom window run `atom --dev .` in the terminal or use the **View > Developer > Open in Dev Mode** menu
 1. Change the name of the theme in the theme's package.json file
-1. Name your theme end with a -ui, for example super-white-ui
-1. Run apm link --dev to symlink your repository to ~/.atom/dev/packages
-1. Reload Atom using Alt+Cmd+Ctrl+L
+1. Name your theme end with a `-ui`, for example `super-white-ui` [for syntax themes like this package, use `-syntax` instead of `-ui`]
+1. Run `apm link --dev` to symlink your repository to *~/.atom/dev/packages*
+1. Reload Atom using `Alt+Cmd+Ctrl+L`
 1. Enable the theme via the "UI Theme" drop-down in the "Themes" tab of the Settings View
 1. Make changes! Since you opened the theme in a Dev Mode window, changes will be instantly reflected in the editor without having to reload.
 
