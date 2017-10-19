@@ -16,7 +16,7 @@ Begun by heavily modifying [new era light](https://github.com/juanmnl/new-era-li
 
 ###### or, from the command line:
 
-```apm install pure-syntax```
+```apm install soft-era-syntax```
 
 
 💾 enjoy <3
