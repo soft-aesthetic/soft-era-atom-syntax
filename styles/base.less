@@ -154,7 +154,7 @@ atom-text-editor,
   color: @white;
 }
 
-// search/find results
+// find results
 @-webkit-keyframes flash {
   from { background-color: @syntax-selection-flash-color; }
   to { background-color: null; }
@@ -212,8 +212,9 @@ atom-text-editor,
   // }
 }
 .syntax--string {
-  // border-bottom: 1px dashed #aaa;
-  // border-bottom: 1px dashed #e2e2e2;
+  border-bottom: 1px dashed #aaa;
+  border-bottom: 1px dashed #e2e2e2;
+  border-bottom: 1px dashed fade(@soft-light-gray, 100%);
 }
 .syntax--string.syntax--begin,
 .syntax--string.syntax--end {
@@ -221,29 +222,31 @@ atom-text-editor,
   color: inherit !important;
   opacity: .8;
   position: relative;
-  font-style: italic;
+  border-bottom: 1px solid #e2e2e2;
+  // font-style: italic;
 
-  &::before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 0;
-    border: .4em solid;
-    border-top-color: transparent;
-    border-bottom-color: transparent;
-    position: absolute;
-    top: 20%;
-    opacity: .08;
-  }
+  // &::before {
+  //   content: "";
+  //   display: block;
+  //   width: 0;
+  //   height: 0;
+  //   border: .4em solid;
+  //   border-top-color: transparent;
+  //   border-bottom-color: transparent;
+  //   position: absolute;
+  //   top: 20%;
+  //   opacity: .08;
+  // }
 }
-.syntax--string.syntax--begin::before {
-  border-right: none;
-  right: -.1em;
-}
-.syntax--string.syntax--end::before {
-  border-left: none;
-  left: -.1em;
-}
+// .syntax--string.syntax--begin::before {
+//   border-right: none;
+//   // right: -.1em;
+//   left: 0;
+// }
+// .syntax--string.syntax--end::before {
+//   border-left: none;
+//   right: 0;
+// }
 
 
 .syntax--unit {
@@ -252,7 +255,8 @@ atom-text-editor,
   // .value-shadow();
 }
 
-// set the color of all punction, except let string ends and beings be defined by the string color
+// set the color of all punction
+  // -> except let string ends and beings be defined by the string color
 // useful separation for json styling etc
 .punctuation[not=".syntax--string.syntax--begin"][not=".syntax--string.syntax--end"] {
   color: @punctuation;

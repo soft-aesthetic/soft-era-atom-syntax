@@ -92,6 +92,7 @@ atom-text-editor::shadow .comment {
 ### TODO:
 - [x] create variable for operator and whatever other `@soft-` is still in use in the `base.less` file
 - [ ] this theme reports deprecations in the CSS selectors, pull in new version of atom one theme to compare/revise
+  - [ ] also compare with the Flatwhite theme for colors & how they decides to higlight various elements.
   - [ ] if that doesn't work, just update selectors in this theme
 - [ ] examine differences between the packages `react` (~500k downloads) and `language-babel` (~1.5m downloads), as they lead to different colors in a lot of cases.
 - [ ] build in better support for  `language-babel`

@@ -12,15 +12,16 @@
 @syntax-background-color: @background;
 
 // Guide colors
-@syntax-wrap-guide-color: @white;
-@syntax-indent-guide-color: @white;
+@syntax-wrap-guide-color: fade(@white, 60%);
+@syntax-indent-guide-color: @soft-light-gray;
 @syntax-invisible-character-color: @soft-light-gray;
 
 // For find and replace markers
 @syntax-result-marker-color: @soft-text-faded;
 @syntax-result-marker-color-selected: @white;
 @syntax-selection-flash-color: @soft-green;
-
+          // hi asdfasdfadsf
+          // testing indent guides
 // Gutter colors
 @syntax-gutter-text-color: @soft-text-faded;
 @syntax-gutter-text-color-selected: @soft-purple-darker;
@@ -32,3 +33,45 @@
 @syntax-color-added: @soft-green-faded;
 @syntax-color-modified: @soft-yellow-darker;
 @syntax-color-removed: @soft-red;
+
+// broken down:
+@background: @soft-background;
+@text-code: @soft-text; // this color will be used for code and edit views
+@text-code-emphasized: @soft-text-emphasis;
+@text-code-faded: @soft-text-faded;
+@text-other: @soft-violet; //
+@selection: @soft-purple-light;
+
+@tags: @soft-red-faded;
+@inherited-class: @soft-yellow-darker;
+@special-method: @soft-yellow-darker;
+
+@control: @soft-blue;
+@operator: @soft-hot-pink;
+@punctuation: @soft-text-faded;
+
+@entity: @text-code-emphasized;
+@escape-char: @text-code-emphasized;
+@storage: @soft-violet;
+@variable: @soft-purple-darkest;
+@this: @soft-purple-default;
+@constant: @soft-text-dark;
+@string: @soft-text-dark;
+@link: @soft-hot-pink;
+@class: @soft-violet;
+@key: @soft-violet;
+@property: @soft-violet;
+@property-name: @soft-text-dark;
+// @value: @soft-text-dark;
+@unit: @soft-hot-pink;
+
+
+@function: @soft-green;
+@function-word: @soft-green-faded; // color for the word "function"
+@parameter: @soft-red-faded;
+@argument: @soft-salmon;
+
+@comment: @gray;
+@note: @soft-orange;
+
+@folded: @light-gray;
