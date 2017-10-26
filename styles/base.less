@@ -1,4 +1,5 @@
 @import "syntax-variables";
+@import "package-styles";
 
 .value-shadow {
   text-shadow: 1px 1px 0 fade(@black, 5%),
@@ -78,6 +79,7 @@ atom-text-editor,
 
 .comment {
   color: @comment;
+  opacity: .7;
 }
 
 .entity {
@@ -97,7 +99,7 @@ atom-text-editor,
 
   &.control {
     color: @control;
-    font-weight: 500;
+    font-weight: 600;
   }
 
   &.operator {
@@ -116,24 +118,30 @@ atom-text-editor,
 
 .storage {
   color: @storage;
+  background: none;
 }
 
 .constant {
   color: @constant;
+  background: fade(@soft-light-gray, 65%);
+
+  &.other {
+    background: none;
+  }
 
   &.character.escape {
     color: @escape-char;
   }
 
-  &.numeric {
-  }
+  // &.numeric {
+  // }
 
   &.other.color {
     color: @text-code-emphasized;
   }
 
-  &.other.symbol {
-  }
+  // &.other.symbol {
+  // }
 }
 
 .variable {
@@ -155,7 +163,7 @@ atom-text-editor,
 }
 
 // find results
-@-webkit-keyframes flash {
+@keyframes flash {
   from { background-color: @syntax-selection-flash-color; }
   to { background-color: null; }
 }
@@ -193,6 +201,7 @@ atom-text-editor,
 // :not(".syntax--key") .string {
 .string {
   color: @string;
+  background: fade(@soft-light-gray, 25%);
 
   &.regexp {
     // color: @text-code-emphasized;
@@ -211,18 +220,31 @@ atom-text-editor,
   //   color: @text-code;
   // }
 }
-.syntax--string {
-  border-bottom: 1px dashed #aaa;
-  border-bottom: 1px dashed #e2e2e2;
-  border-bottom: 1px dashed fade(@soft-light-gray, 100%);
-}
+// // .syntax--const,
+// .syntax--null,
+// .syntax--numeric,
+// .syntax--boolean
+// {
+//   background: fade(@soft-light-gray, 65%);
+// }
+// .syntax--string {
+//   // border-bottom: 2px dashed #aaa;
+//   // border-bottom: 1px dashed #e2e2e2;
+//   // border-bottom: 2px dashed fade(@soft-light-gray, 100%);
+//
+//   // border-radius: 20px;
+//   // overflow: none;
+// }
 .syntax--string.syntax--begin,
 .syntax--string.syntax--end {
   color: fade(@string, 80%);
   color: inherit !important;
   opacity: .8;
   position: relative;
-  border-bottom: 1px solid #e2e2e2;
+  // border-bottom: 1px solid #e2e2e2;
+  // border-top: 1px solid #e2e2e2;
+  // border-bottom: 1px solid fade(@soft-light-gray, 30%);
+  // border-top: 1px solid fade(@soft-light-gray, 30%);
   // font-style: italic;
 
   // &::before {
@@ -263,6 +285,7 @@ atom-text-editor,
   &.definition {
     &.comment {
       color: @comment;
+      opacity: .7;
     }
 
     // &.string,
@@ -431,7 +454,7 @@ atom-text-editor,
 //this, super, etc:
 // .variable.language.js
 .variable.language {
-  font-weight: 500;
+  font-weight: 600;
   color: @this;
 }
 
@@ -463,11 +486,10 @@ atom-text-editor,
   left: -1px;
   box-sizing: border-box;
   border: 2px solid #fff;
-  border-radius: 5px;
+  border-radius: 2px;
   background: #fff !important;
   z-index: 1000000;
-  box-shadow: 1px 0px 0px rgba(168, 164, 190, .35),
-    -1px 0px 0px rgba(168, 164, 190, .35);
+  box-shadow: 0 0 0px 1px fade(@soft-light-gray, 70%);
 }
 
 atom-text-editor::shadow .meta.arguments.js {
