@@ -1,12 +1,12 @@
 # \~ soft era \~
 
-### syntax theme for [Atom](https://atom.io/)
+## syntax theme for [Atom](https://atom.io/)
 
-🌸 Light pastel syntax theme for cozy, cute coding. 🌱
+🌸 Light pastel syntax theme for cozy, cute coding & typing. 🌱
 
 ![soft era syntax theme screenshot](screenshot.png)
 
-~.~
+\~.\~
 <br>&nbsp;&nbsp;a soft, warm, low contrast theme,
 <br>&nbsp;&nbsp;with pastel accents that are easy on your eyes
 
@@ -14,6 +14,8 @@
 <br>&nbsp;&nbsp;make stuff and learn.
 <br>&nbsp;&nbsp;make the world your kinda place.
 <br>&nbsp;&nbsp;take care of the people around you
+
+🌿
 
 ## Installation
 
