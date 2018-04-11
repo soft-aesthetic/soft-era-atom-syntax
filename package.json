@@ -5,7 +5,7 @@
   "description": "Light pastel syntax theme for soft, warm, cozy, or cute coding",
   "repository": {
     "type": "git",
-    "url": "https://github.com/animalphase/soft-era-syntax.git"
+    "url": "https://github.com/soft-aesthetic/soft-era-syntax-atom.git"
   },
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
@@ -31,7 +31,7 @@
   "author": "Audrey Moon",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/animalphase/soft-era-syntax/issues"
+    "url": "https://github.com/soft-aesthetic/soft-era-syntax-atom/issues"
   },
-  "homepage": "https://github.com/animalphase/soft-era-syntax"
+  "homepage": "https://github.com/soft-aesthetic/soft-era-syntax-atom"
 }
