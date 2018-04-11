@@ -32,9 +32,7 @@
 
 ---
 
-## User stylesheet modifications
-
-### Fixes:
+### Fixes
 
 Some UI may cause the cursor to appear as invisible, or the same as the background color, in search boxes. If you have this issue, you can add this to your stylesheet:
 
@@ -45,9 +43,10 @@ Some UI may cause the cursor to appear as invisible, or the same as the backgrou
 }
 ```
 
+---
+
 ![soft era syntax theme screenshot](screenshot2.png)
 
----
 
 ## Contributing
 
