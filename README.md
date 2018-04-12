@@ -1,6 +1,6 @@
 # \~ soft era \~
 
-## syntax theme for [Atom](https://atom.io/)
+### syntax theme for [Atom](https://atom.io/)
 
 🌸 Light pastel syntax theme for cozy, cute coding & typing. 🌱
 
