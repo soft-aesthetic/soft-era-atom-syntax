@@ -2,11 +2,11 @@
 
 ### syntax theme for [Atom](https://atom.io/)
 
-🌸 Light pastel syntax theme for cozy, cute coding. 🌱
+🌸 Light pastel syntax theme for cozy, cute coding & typing. 🌱
 
 ![soft era syntax theme screenshot](screenshot.png)
 
-~.~
+\~.\~
 <br>&nbsp;&nbsp;a soft, warm, low contrast theme,
 <br>&nbsp;&nbsp;with pastel accents that are easy on your eyes
 
@@ -14,6 +14,8 @@
 <br>&nbsp;&nbsp;make stuff and learn.
 <br>&nbsp;&nbsp;make the world your kinda place.
 <br>&nbsp;&nbsp;take care of the people around you
+
+🌿
 
 ## Installation
 
@@ -30,9 +32,7 @@
 
 ---
 
-## User stylesheet modifications
-
-### Fixes:
+### Fixes
 
 Some UI may cause the cursor to appear as invisible, or the same as the background color, in search boxes. If you have this issue, you can add this to your stylesheet:
 
@@ -43,9 +43,10 @@ Some UI may cause the cursor to appear as invisible, or the same as the backgrou
 }
 ```
 
+---
+
 ![soft era syntax theme screenshot](screenshot2.png)
 
----
 
 ## Contributing
 
