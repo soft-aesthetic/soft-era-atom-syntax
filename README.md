@@ -45,9 +45,6 @@ Some UI may cause the cursor to appear as invisible, or the same as the backgrou
 
 ---
 
-![soft era syntax theme screenshot](screenshot2.png)
-
-
 ## Contributing
 
 ### TODO:
