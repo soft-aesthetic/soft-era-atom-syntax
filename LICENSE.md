@@ -1,4 +1,4 @@
-Copyright (c) 2017 Audrey Moon
+Copyright (c) 2018 Audrey Moon
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
