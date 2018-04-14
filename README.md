@@ -46,6 +46,7 @@ Some UI may cause the cursor to appear as invisible, or the same as the backgrou
 ## Contributing
 
 ### TODO:
+- [ ] do a full pass on markdown styles to make sure formatting is colored consistently with the rest of the system, and with the correct inheritence rules. reference the highlight colors in [soft era for VC Code](https://github.com/soft-aesthetic/soft-era-vs-code).
 - [x] create variable for operator and whatever other `@soft-` is still in use in the `base.less` file
 - [ ] this theme reports deprecations in the CSS selectors, pull in new version of atom one theme to compare/revise
   - [ ] also compare with the Flatwhite theme for colors & how they decides to higlight various elements.
