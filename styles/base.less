@@ -213,6 +213,7 @@ atom-text-editor,
 
   &.other.link {
     color: @link;
+    // text-decoration: underline;
   }
 
   // .syntax--js,
@@ -376,6 +377,7 @@ atom-text-editor,
 
   &.link {
     color: @link;
+    background: fade(@soft-light-gray, 25%);
   }
 
   &.require {
@@ -398,7 +400,7 @@ atom-text-editor,
 
 .markup {
   &.bold {
-    color: @orange;
+    color: @soft-violet;
     font-style: bold;
   }
 
@@ -411,8 +413,12 @@ atom-text-editor,
   }
 
   &.italic {
-    color: @purple;
+    color: @soft-violet;
     font-style: italic;
+  }
+
+  &.heading {
+    color: @soft-green;
   }
 
   &.heading .punctuation.definition.heading {
@@ -424,7 +430,7 @@ atom-text-editor,
   }
 
   &.list {
-    color: @orange;
+    color: @soft-purple-darker;
   }
 
   &.quote {
@@ -433,6 +439,14 @@ atom-text-editor,
 
   &.raw.inline {
     color: @yellow;
+  }
+
+  &.link {
+    color: @link;
+    background: fade(@soft-light-gray, 25%);
+    // border-bottom: 2px solid;
+    // border-bottom: .15em solid;
+    // text-decoration: none;
   }
 }
 
