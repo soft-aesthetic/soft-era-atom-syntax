@@ -6,6 +6,8 @@
 
 ![soft era syntax theme screenshot](screenshot.png)
 
+> UI theme in screenshot is a WIP `soft era UI`. you can use One Light UI and [these CSS overrides](https://gist.github.com/animalphase/b18d087068bd64369d69d7e9acafb8b0) to use it now :)
+
 \~.\~
 <br>&nbsp;&nbsp;a soft, warm, low contrast theme,
 <br>&nbsp;&nbsp;with pastel accents that are easy on your eyes
