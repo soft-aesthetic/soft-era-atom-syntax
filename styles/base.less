@@ -77,66 +77,66 @@ atom-text-editor,
   }
 }
 
-.comment {
+.syntax--comment {
   color: @comment;
   opacity: .7;
 }
 
-.entity {
+.syntax--entity {
   color: @entity;
 
-  &.name.type {
+  &.syntax--name.syntax--type {
     color: @morado;
   }
 
-  &.other.inherited-class {
+  &.syntax--other.syntax--inherited-class {
     color: @inherited-class;
   }
 }
 
-.keyword {
+.syntax--keyword {
   color: @tags;
 
-  &.control {
+  &.syntax--control {
     color: @control;
     font-weight: 600;
   }
 
-  &.operator {
+  &.syntax--operator {
     color: @operator;
     font-weight: 500;
   }
 
-  &.other.special-method {
+  &.syntax--other.syntax--special-method {
     color: @special-method;
   }
 
-  &.other.unit {
+  &.syntax--other.syntax--unit {
     color: @unit;
   }
 }
 
-.storage {
+.syntax--storage {
   color: @storage;
   background: none;
 }
 
-.constant {
+.syntax--constant {
   color: @constant;
   background: fade(@soft-light-gray, 65%);
 
-  &.other {
+  &.syntax--other {
     background: none;
   }
 
-  &.character.escape {
+  &.syntax--character.syntax--escape {
     color: @escape-char;
   }
 
   // &.numeric {
   // }
 
-  &.other.color {
+  &.syntax--other.syntax--color {
     color: @text-code-emphasized;
   }
 
@@ -144,20 +144,20 @@ atom-text-editor,
   // }
 }
 
-.variable {
+.syntax--variable {
   /* color: lighten(@orange, 15%); */
   color: @variable;
 
-  &.interpolation {
+  &.syntax--interpolation {
     color: darken(@orange, 25%);
   }
 
-  &.parameter.function {
+  &.syntax--parameter.syntax--function {
     color: @parameter;
   }
 }
 
-.invalid.illegal {
+.syntax--invalid.syntax--illegal {
   background-color: @red;
   color: @white;
 }
@@ -199,19 +199,19 @@ atom-text-editor,
 // .string:not([class*='.json']) {
 // atom-pane:not([data-active-item-name*=".json"]) .string {
 // :not(".syntax--key") .string {
-.string {
+.syntax--string {
   color: @string;
   background: fade(@soft-light-gray, 25%);
 
-  &.regexp {
+  &.syntax--regexp {
     // color: @text-code-emphasized;
 
-    .source.ruby.embedded {
+    .syntax--source.syntax--ruby.syntax--embedded {
       color: @orange;
     }
   }
 
-  &.other.link {
+  &.syntax--other.syntax--link {
     color: @link;
     text-decoration: underline;
   }
@@ -281,10 +281,10 @@ atom-text-editor,
 // set the color of all punction
   // -> except let string ends and beings be defined by the string color
 // useful separation for json styling etc
-.punctuation[not=".syntax--string.syntax--begin"][not=".syntax--string.syntax--end"] {
+.syntax--punctuation[not=".syntax--string.syntax--begin"][not=".syntax--string.syntax--end"] {
   color: @punctuation;
-  &.definition {
-    &.comment {
+  &.syntax--definition {
+    &.syntax--comment {
       color: @comment;
       opacity: .7;
     }
@@ -296,36 +296,36 @@ atom-text-editor,
     //   color: ;
     // }
 
-    &.heading,
-    &.identity {
+    &.syntax--heading,
+    &.syntax--identity {
       color: @cyan;
     }
 
-    &.bold {
+    &.syntax--bold {
       color: @morado;
       font-style: bold;
     }
 
-    &.italic {
+    &.syntax--italic {
       color: @tags;
       font-style: italic;
     }
   }
 
-  &.section.embedded {
+  &.syntax--section.syntax--embedded {
     color: darken(@red, 10%);
   }
 }
 
-.support {
-  &.class {
+.syntax--support {
+  &.syntax--class {
     color: @class;
   }
 
-  &.function {
+  &.syntax--function {
     color: @function;
 
-    &.any-method {
+    &.syntax--any-method {
       color: @tags;
     }
   }
@@ -342,107 +342,107 @@ atom-text-editor,
   color: @function-word;
 }
 
-.entity {
-  &.name.function {
+.syntax--entity {
+  &.syntax--name.syntax--function {
     color: @function;
   }
 
-  &.name.class,
-  &.name.type.class,
+  &.syntax--name.syntax--class,
+  &.syntax--name.syntax--type.syntax--class,
    {
     color: @class;
   }
 
-  &.name.section {
+  &.syntax--name.syntax--section {
     color: @yellow;
   }
 
-  &.name.tag {
+  &.syntax--name.syntax--tag {
     color: @tags;
   }
 
-  &.other.attribute-name {
+  &.syntax--other.syntax--attribute-name {
     color: @text-code-emphasized;
 
-    &.id {
+    &.syntax--id {
       color: @yellow;
     }
   }
 }
 
-.meta {
-  &.class {
+.syntax--meta {
+  &.syntax--class {
     color: @morado;
   }
 
-  &.link {
+  &.syntax--link {
     // color: @link;
     // background: fade(@soft-light-gray, 25%);
     // text-decoration: underline;
   }
 
-  &.require {
+  &.syntax--require {
     color: @yellow;
   }
 
-  &.selector {
+  &.syntax--selector {
     color: @tags;
   }
 
-  &.separator {
+  &.syntax--separator {
     background-color: @gray;
     color: @text-code;
   }
 }
 
-.none {
+.syntax--none {
   color: @text-code;
 }
 
-.markup {
-  &.bold {
+.syntax--markup {
+  &.syntax--bold {
     color: @soft-violet;
     font-style: bold;
   }
 
-  &.changed {
+  &.syntax--changed {
     color: @tags;
   }
 
-  &.deleted {
+  &.syntax--deleted {
     color: @red;
   }
 
-  &.italic {
+  &.syntax--italic {
     color: @soft-violet;
     font-style: italic;
   }
 
-  &.heading {
+  &.syntax--heading {
     color: @soft-green;
   }
 
-  &.heading .punctuation.definition.heading {
+  &.syntax--heading .syntax--punctuation.syntax--definition.syntax--heading {
     color: @cyan;
   }
 
-  &.inserted {
+  &.syntax--inserted {
     color: @yellow;
   }
 
-  &.list {
+  &.syntax--list {
     color: @soft-purple-darker;
   }
 
-  &.quote {
+  &.syntax--quote {
     color: @red;
   }
 
-  &.raw.inline {
+  &.syntax--raw.syntax--inline {
     color: @yellow;
   }
 
-  &.link {
+  &.syntax--link {
     color: @link;
     background: fade(@soft-light-gray, 25%);
     // border-bottom: 2px solid;
@@ -451,9 +451,9 @@ atom-text-editor,
   }
 }
 
-.source.gfm .markup {
+.syntax--source.syntax--gfm .syntax--markup {
   -webkit-font-smoothing: auto;
-  &.heading {
+  &.syntax--heading {
     color: @yellow;
   }
 }
@@ -468,7 +468,7 @@ atom-text-editor,
 
 //this, super, etc:
 // .variable.language.js
-.variable.language {
+.syntax--variable.syntax--language {
   font-weight: 600;
   color: @this;
 }
@@ -509,7 +509,7 @@ atom-text-editor,
   box-shadow: 0 0 0px 1px fade(@soft-light-gray, 70%);
 }
 
-atom-text-editor::shadow .meta.arguments.js {
+atom-text-editor.editor .syntax--meta.syntax--arguments.syntax--js {
   color: @argument;
 }
 
@@ -534,7 +534,7 @@ atom-text-editor.editor .syntax--meta.syntax--arguments.syntax--js .syntax--brac
   color: @class;
 }
 .syntax--key,
-.syntax--key .string {
+.syntax--key .syntax--string {
   color: @key;
 }
 .syntax--property-name {
